@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MacBook to Android File Transfer – Free USB Transfer in Browser (No App)</title>
+<meta name="description" content="Transfer files between MacBook and Android with a USB-C cable, free, in your browser. No app, no cloud. Step-by-step guide: MacBook to Android and Android to Mac file transfer.">
+<meta name="keywords" content="macbook to android transfer, android to mac file transfer, transfer files android to macbook, usb file transfer mac android, android file transfer alternative, mac android usb c transfer, share files macbook android, android file transfer not working mac">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="USB Transfer">
+<meta name="theme-color" content="#2563eb">
+<link rel="canonical" href="https://YOURDOMAIN.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MacBook to Android File Transfer – Free, in Your Browser">
+<meta property="og:description" content="Connect a USB-C cable and move files between MacBook and Android. No app needed.">
+<meta property="og:url" content="https://YOURDOMAIN.com/">
+<meta property="og:image" content="https://YOURDOMAIN.com/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MacBook to Android File Transfer – Free, in Your Browser">
+<meta name="twitter:description" content="Connect a USB-C cable and move files between MacBook and Android. No app needed.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebApplication","name":"USB Transfer","url":"https://YOURDOMAIN.com/","applicationCategory":"UtilitiesApplication","operatingSystem":"macOS, Android","browserRequirements":"Requires WebUSB (Chrome, Edge)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},
+{"@type":"HowTo","name":"How to transfer files between MacBook and Android with a USB-C cable","step":[
+{"@type":"HowToStep","name":"Enable USB debugging","text":"On Android open Settings > About phone, tap Build number 7 times, then turn on USB debugging in Developer options."},
+{"@type":"HowToStep","name":"Connect the cable","text":"Plug the USB-C cable into your MacBook and Android phone. Set USB mode to File transfer."},
+{"@type":"HowToStep","name":"Open this site in Chrome","text":"Click Connect device and choose your phone."},
+{"@type":"HowToStep","name":"Allow access","text":"Tap Allow on the phone's USB debugging prompt."},
+{"@type":"HowToStep","name":"Transfer files","text":"Click a phone file to save it to your Mac, or drag files from your Mac to upload them to the phone."}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I transfer files from MacBook to Android?","acceptedAnswer":{"@type":"Answer","text":"Connect a USB-C cable, open this site in Chrome, click Connect device, allow USB debugging on the phone, then drag files into the page."}},
+{"@type":"Question","name":"How do I transfer files from Android to MacBook?","acceptedAnswer":{"@type":"Answer","text":"After connecting, browse your phone storage on this page and click a file to save it to your Mac."}},
+{"@type":"Question","name":"Do I need to install an app?","acceptedAnswer":{"@type":"Answer","text":"No. It runs in Chrome or Edge using WebUSB, and files never leave your devices."}}]}
+]}
+</script>
+<!-- Paste your AdSense script here:
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1b1f2a;--mut:#6b7280;--ac:#2563eb;--bd:#e5e7eb}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1218;--card:#181c25;--tx:#e8eaf0;--mut:#9aa3b2;--ac:#4f8cff;--bd:#2a3040}}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--tx);line-height:1.5}
+main{max-width:860px;margin:0 auto;padding:20px}
+h1{font-size:1.7rem;margin:.2em 0}.sub{color:var(--mut);margin-top:0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px;margin:16px 0}
+button,.btn{background:var(--ac);color:#fff;border:0;border-radius:10px;padding:10px 16px;font-size:1rem;cursor:pointer}
+button.sec{background:transparent;color:var(--ac);border:1px solid var(--ac)}
+button:disabled{opacity:.5;cursor:not-allowed}
+ol{padding-left:20px}li{margin:6px 0}
+#warn{background:#fef3c7;color:#78350f;padding:12px;border-radius:10px;display:none}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+#path{font-family:ui-monospace,monospace;font-size:.9rem;color:var(--mut);word-break:break-all}
+#drop{border:2px dashed var(--bd);border-radius:12px;padding:18px;text-align:center;color:var(--mut);margin:12px 0}
+#drop.over{border-color:var(--ac);background:rgba(37,99,235,.08)}
+.list{max-height:420px;overflow:auto;border:1px solid var(--bd);border-radius:10px}
+.item{display:flex;justify-content:space-between;gap:10px;padding:10px 12px;border-bottom:1px solid var(--bd);cursor:pointer}
+.item:last-child{border:0}.item:hover{background:rgba(127,127,127,.1)}
+.item small{color:var(--mut);white-space:nowrap}
+#log{font-size:.9rem;color:var(--mut);min-height:1.4em}
+.ad{min-height:90px;border:1px dashed var(--bd);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:.8rem;margin:16px 0}
+.hero{background:linear-gradient(135deg,var(--ac),#7c3aed);color:#fff;border-radius:16px;padding:20px;margin:16px 0;text-align:center}
+.hero h2{margin:0 0 6px;font-size:1.25rem}.hero p{margin:0;opacity:.95}
+.anim{color:var(--tx);max-width:600px;width:100%;display:block;margin:10px auto 0}
+.flow{animation:dash 1s linear infinite}@keyframes dash{to{stroke-dashoffset:-18}}
+.pulse{animation:pulse 2s ease-in-out infinite;transform-origin:center;transform-box:fill-box}@keyframes pulse{50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){.flow,.pulse{animation:none}}
+details.tut summary{cursor:pointer;font-size:1.1rem;font-weight:600;list-style:none}
+details.tut summary::before{content:"▶ ";color:var(--ac)}details.tut[open] summary::before{content:"▼ "}
+.steps{counter-reset:s;list-style:none;padding:0;margin:14px 0 0}
+.steps li{counter-increment:s;position:relative;padding:12px 12px 12px 54px;border:1px solid var(--bd);border-radius:12px;margin:10px 0}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--ac);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.steps b{display:block}.steps span{color:var(--mut)}
+footer{color:var(--mut);font-size:.85rem;text-align:center;padding:24px 0}
+</style>
+</head>
+<body>
+<main>
+<h1>📱 USB Transfer</h1>
+<p class="sub">Move files between your MacBook and Android phone over a USB cable — right in the browser.</p>
+
+<div id="warn"></div>
+
+<section class="hero">
+  <h2>Just connect your USB-C cable and follow the tutorial</h2>
+  <p>Easily share files from MacBook to Android and from Android to MacBook. Free, no app, no cloud.</p>
+  <svg class="anim" viewBox="0 0 600 170" role="img" aria-label="USB-C cable connecting a MacBook to an Android phone">
+    <rect x="35" y="30" width="130" height="85" rx="8" fill="none" stroke="currentColor" stroke-width="4"/>
+    <rect x="18" y="118" width="164" height="10" rx="5" fill="currentColor"/>
+    <text x="100" y="78" text-anchor="middle" font-size="15" fill="currentColor">MacBook</text>
+    <path d="M182 123 C 270 175, 350 175, 432 92" stroke="#fff" stroke-opacity=".35" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <path class="flow" d="M182 123 C 270 175, 350 175, 432 92" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="10 8"/>
+    <rect x="170" y="115" width="24" height="16" rx="5" fill="#fff"/>
+    <rect x="426" y="84" width="24" height="16" rx="5" fill="#fff"/>
+    <rect x="450" y="22" width="76" height="124" rx="14" fill="none" stroke="currentColor" stroke-width="4"/>
+    <circle cx="488" cy="36" r="3" fill="currentColor"/>
+    <text x="488" y="88" text-anchor="middle" font-size="14" fill="currentColor">Android</text>
+    <circle r="8" fill="#22c55e"><animateMotion dur="2.6s" repeatCount="indefinite" path="M182 123 C 270 175, 350 175, 432 92"/></circle>
+    <circle r="8" fill="#facc15"><animateMotion dur="2.6s" begin="1.3s" repeatCount="indefinite" path="M432 92 C 350 175, 270 175, 182 123"/></circle>
+    <text class="pulse" x="300" y="22" text-anchor="middle" font-size="13" fill="#fff">⇄ files moving</text>
+  </svg>
+</section>
+
+<details class="card tut" id="tutorial">
+  <summary>📖 How to use – step by step (click to open)</summary>
+  <ol class="steps">
+    <li><b>Turn on Developer options</b><span>On Android go to Settings → About phone and tap “Build number” 7 times.</span></li>
+    <li><b>Enable USB debugging</b><span>Settings → Developer options → turn on “USB debugging”.</span></li>
+    <li><b>Connect the USB-C cable</b><span>Plug one end into your MacBook and the other into your Android phone. Pull down the notification and choose “File transfer”.</span></li>
+    <li><b>Open this page in Chrome or Edge</b><span>Safari and Firefox do not support USB access.</span></li>
+    <li><b>Click “Connect device”</b><span>Choose your phone from the list in the browser popup.</span></li>
+    <li><b>Tap “Allow” on your phone</b><span>Approve the “Allow USB debugging?” prompt (tick “Always allow”).</span></li>
+    <li><b>Android → MacBook</b><span>Open folders on the page and click any file. Choose where to save it on your Mac.</span></li>
+    <li><b>MacBook → Android</b><span>Open the destination folder on the phone, then drag files in or click “Upload files here”.</span></li>
+  </ol>
+</details>
+
+<div class="ad" id="ad-top"><!-- AdSense ad unit #1 goes here -->Ad space</div>
+
+<div class="card">
+  <h3>How to connect</h3>
+  <ol>
+    <li>On Android: <b>Settings → About phone</b>, tap <b>Build number</b> 7 times to enable Developer options.</li>
+    <li>Open <b>Settings → Developer options</b> and turn on <b>USB debugging</b>.</li>
+    <li>Plug your phone into the Mac with a USB cable (use Chrome or Edge).</li>
+    <li>Click <b>Connect device</b> below, pick your phone, then tap <b>Allow</b> on the phone's prompt.</li>
+  </ol>
+  <div class="row"><button id="connect">Connect device</button><button id="disc" class="sec" disabled>Disconnect</button></div>
+  <p id="status" class="sub">Not connected.</p>
+</div>
+
+<div class="card" id="files" style="display:none">
+  <div class="row"><button class="sec" id="up">⬆ Parent folder</button><button class="sec" id="refresh">↻ Refresh</button><button id="pick">Upload files here</button></div>
+  <input type="file" id="fileinput" multiple hidden>
+  <p id="path"></p>
+  <div id="drop">Drag files here from your Mac to upload to this folder</div>
+  <div class="list" id="list"></div>
+  <progress id="bar" value="0" max="100" style="width:100%;display:none"></progress>
+  <p id="log"></p>
+  <details><summary>Debug info (send this if something fails)</summary>
+    <pre id="dbg" style="white-space:pre-wrap;font-size:.8rem;max-height:200px;overflow:auto"></pre>
+    <button class="sec" id="copydbg">Copy debug info</button>
+  </details>
+</div>
+
+<div class="ad" id="ad-bottom"><!-- AdSense ad unit #2 goes here -->Ad space</div>
+
+<div class="card">
+  <h3>FAQ</h3>
+  <p><b>How do I transfer files from MacBook to Android?</b> Connect a USB-C cable, click Connect device, allow USB debugging on the phone, then drag your Mac files into the page.</p>
+  <p><b>How do I transfer files from Android to MacBook?</b> After connecting, open your phone folders on this page and click a file to save it to your Mac.</p>
+  <p><b>Is it private?</b> Yes. Files go straight over the cable between your devices; nothing is uploaded to any server.</p>
+  <p><b>Phone not showing up?</b> Quit Android File Transfer, Android Studio, or any running <code>adb</code> (run <code>adb kill-server</code> in Terminal) — they block the browser from using the phone.</p>
+  <p><b>Supported browsers:</b> Chrome, Edge, Opera on macOS. Safari and Firefox do not support WebUSB.</p>
+</div>
+<footer><a href="/android-file-transfer-not-working-mac.html">Android File Transfer not working on Mac?</a> · Privacy Policy · Contact · © <span id="yr"></span> USB Transfer</footer>
+</main>
+
+<script type="module">
+document.getElementById("yr").textContent = new Date().getFullYear();
+const $ = id => document.getElementById(id);
+const warn = $("warn");
+if (!navigator.usb) {
+  warn.style.display = "block";
+  warn.textContent = "Your browser doesn't support WebUSB. Please open this page in Google Chrome or Microsoft Edge on your Mac.";
+  $("connect").disabled = true;
+}
+
+let adb = null, sync = null, cwd = "/sdcard";
+const log = t => $("log").textContent = t;
+
+async function loadLibs() {
+  const V = "@0.0.24";
+  const [a, d, c] = await Promise.all([
+    import("https://cdn.jsdelivr.net/npm/@yume-chan/adb" + V + "/+esm"),
+    import("https://cdn.jsdelivr.net/npm/@yume-chan/adb-daemon-webusb" + V + "/+esm"),
+    import("https://cdn.jsdelivr.net/npm/@yume-chan/adb-credential-web" + V + "/+esm")
+  ]);
+  return { Adb: a.Adb, Transport: a.AdbDaemonTransport, Manager: d.AdbDaemonWebUsbDeviceManager, Store: c.default || c.AdbWebCredentialStore };
+}
+
+$("connect").onclick = async () => {
+  try {
+    $("status").textContent = "Loading…";
+    const L = await loadLibs();
+    const device = await L.Manager.BROWSER.requestDevice();
+    if (!device) { $("status").textContent = "No device selected."; return; }
+    $("status").textContent = "Look at your phone and tap “Allow” on the USB debugging prompt…";
+    const connection = await device.connect();
+    const transport = await L.Transport.authenticate({ serial: device.serial, connection, credentialStore: new L.Store("USB Transfer") });
+    adb = new L.Adb(transport);
+    $("status").textContent = "✅ Connected: " + (device.name || device.serial);
+    $("files").style.display = "block";
+    $("disc").disabled = false;
+    await list("/sdcard");
+  } catch (e) {
+    console.error(e);
+    $("status").textContent = "Could not connect: " + (e.message || e) + ". Close other apps using the phone (Android File Transfer, adb) and try again.";
+  }
+};
+
+$("disc").onclick = async () => {
+  try { await adb?.close(); } catch {}
+  adb = null; $("files").style.display = "none"; $("disc").disabled = true; $("status").textContent = "Disconnected.";
+};
+
+const fmt = n => n > 1e9 ? (n/1e9).toFixed(2)+" GB" : n > 1e6 ? (n/1e6).toFixed(1)+" MB" : n > 1e3 ? (n/1e3).toFixed(0)+" KB" : n+" B";
+const join = (a, b) => (a.endsWith("/") ? a : a + "/") + b;
+
+async function list(path) {
+  const s = await adb.sync();
+  try {
+    const items = [];
+    for await (const e of s.opendir(path)) if (e.name !== "." && e.name !== "..") items.push(e);
+    cwd = path; $("path").textContent = cwd;
+    if (items[0]) dbg("sample entry " + J(items[0]));
+    items.sort((x, y) => (isDir(y) - isDir(x)) || x.name.localeCompare(y.name));
+    const box = $("list"); box.innerHTML = "";
+    if (!items.length) box.innerHTML = '<div class="item">Empty folder</div>';
+    for (const e of items) {
+      const d = document.createElement("div"); d.className = "item";
+      const l = document.createElement("span"); l.textContent = (isDir(e) ? "📁 " : "📄 ") + e.name;
+      const r = document.createElement("small"); r.textContent = isDir(e) ? "" : fmt(Number(e.size)) + "  ⬇";
+      d.append(l, r);
+      d.onclick = () => isDir(e) ? list(join(cwd, e.name)) : download(join(cwd, e.name), e.name, Number(e.size));
+      box.append(d);
+    }
+    log("");
+  } catch (err) { log("Error: " + (err.message || err)); }
+  finally { await s.dispose(); }
+}
+const isDir = e => { const t = (Number(e.mode) >> 12) & 0xf; return t === 4 || t === 10; };
+
+let lastBytes = 0;
+function meter(total, label) {
+  let done = 0, last = 0; lastBytes = 0; const t0 = performance.now();
+  const bar = $("bar"); bar.style.display = "block"; bar.value = 0;
+  return new TransformStream({
+    transform(chunk, ctl) {
+      done += chunk.byteLength; lastBytes = done; ctl.enqueue(chunk.slice());
+      const now = performance.now();
+      if (now - last > 250) {
+        last = now;
+        bar.value = total ? done / total * 100 : 0;
+        log(label + " " + fmt(done) + " / " + fmt(total) + " · " + (done / 1e6 / ((now - t0) / 1000)).toFixed(1) + " MB/s");
+      }
+    },
+    flush() { bar.value = 100; }
+  });
+}
+
+const J = v => JSON.stringify(v, (k, x) => typeof x === "bigint" ? String(x) : x);
+function dbg(m) { console.log(m); $("dbg").textContent += m + "\n"; }
+$("copydbg").onclick = () => navigator.clipboard.writeText($("dbg").textContent);
+
+async function swSink(name, size) {
+  const reg = await navigator.serviceWorker.register("sw.js");
+  await navigator.serviceWorker.ready;
+  const sw = reg.active || (await navigator.serviceWorker.ready).active;
+  const { readable, writable } = new TransformStream();
+  const id = crypto.randomUUID();
+  sw.postMessage({ dl: 1, id, size, stream: readable }, [readable]);
+  const f = document.createElement("iframe"); f.hidden = true;
+  f.src = new URL("__dl/" + id + "/" + encodeURIComponent(name), location.href).href;
+  document.body.append(f); setTimeout(() => f.remove(), 60000);
+  return writable.getWriter();
+}
+
+async function openSink(name, size) {
+  if ("serviceWorker" in navigator && window.isSecureContext) {
+    try { const w = await swSink(name, size); return { kind: "sw", write: c => w.write(c), close: () => w.close(), abort: () => w.abort().catch(() => {}) }; }
+    catch (e) { dbg("service worker failed: " + e); }
+  }
+  if (window.showSaveFilePicker) {
+    try {
+      const h = await showSaveFilePicker({ suggestedName: name }); const w = await h.createWritable();
+      return { kind: "picker", write: c => w.write(c), close: () => w.close(), abort: () => w.abort().catch(() => {}) };
+    } catch (e) { if (e && e.name === "AbortError") return null; dbg("picker failed: " + e); }
+  }
+  if (size > 500e6) { log("⚠️ This file is too large for this browser mode. Please open the site over HTTPS in Chrome/Edge (see Debug info)."); return null; }
+  const chunks = [];
+  return { kind: "blob", write: c => { chunks.push(c); }, abort() {},
+    close() { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob(chunks)); a.download = name; document.body.appendChild(a); a.click(); a.remove(); } };
+}
+
+async function download(remote, name, size) {
+  const s = await adb.sync();
+  const bar = $("bar");
+  let sink = null, ok = false;
+  try {
+    try { const st = await s.stat(remote); size = Number(st.size) || size; dbg("stat " + J(st)); } catch (e) { dbg("stat failed: " + e); }
+    dbg("download " + remote + " expected=" + size);
+    if (!size) { log("⚠️ The phone reports this file as 0 bytes. It may be empty, a cloud-only placeholder, or protected."); return; }
+    sink = await openSink(name, size);
+    if (!sink) return;
+    dbg("save mode: " + sink.kind);
+    bar.style.display = "block"; bar.value = 0;
+    const t0 = performance.now();
+    const r = s.read(remote).getReader(); let n = 0, last = 0;
+    for (;;) {
+      const { done, value } = await r.read(); if (done) break;
+      n += value.byteLength;
+      await sink.write(value.slice());
+      const now = performance.now();
+      if (now - last > 250) { last = now; bar.value = n / size * 100;
+        log("Downloading " + fmt(n) + " / " + fmt(size) + " · " + (n / 1e6 / ((now - t0) / 1000)).toFixed(1) + " MB/s"); }
+    }
+    dbg("bytes received=" + n);
+    if (n !== size) { log("⚠️ Incomplete file: expected " + fmt(size) + ", received " + fmt(n) + "."); return; }
+    await sink.close(); ok = true;
+    log(sink.kind === "sw" ? "✅ Done: " + name + " (" + fmt(n) + ") – check your browser's Downloads." : "✅ Saved " + name + " (" + fmt(n) + ")");
+  } catch (e) { dbg("download error: " + (e.stack || e)); log("Download failed: " + (e.message || e)); }
+  finally { if (!ok && sink) await sink.abort(); bar.style.display = "none"; await s.dispose(); }
+}
+
+async function upload(files) {
+  const s = await adb.sync();
+  try {
+    for (const f of files) {
+      log("Uploading " + f.name + "…");
+      await s.write({ filename: join(cwd, f.name), file: f.stream().pipeThrough(meter(f.size, "Uploading " + f.name)), permission: 0o644, mtime: Math.floor(f.lastModified / 1000) });
+    }
+    log("✅ Uploaded " + files.length + " file(s)"); $("bar").style.display = "none";
+  } catch (e) { log("Upload failed: " + (e.message || e)); }
+  finally { await s.dispose(); }
+  list(cwd);
+}
+
+$("pick").onclick = () => $("fileinput").click();
+$("fileinput").onchange = e => { if (e.target.files.length) upload([...e.target.files]); e.target.value = ""; };
+$("refresh").onclick = () => list(cwd);
+$("up").onclick = () => { const p = cwd.replace(/\/+$/, "").split("/").slice(0, -1).join("/") || "/"; list(p); };
+const drop = $("drop");
+["dragover", "dragenter"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add("over"); }));
+["dragleave", "drop"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove("over"); }));
+drop.addEventListener("drop", e => { if (e.dataTransfer.files.length) upload([...e.dataTransfer.files]); });
+</script>
+</body>
+</html>
